@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		187EA6961E002FE10092B871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EA6951E002FE10092B871 /* AppDelegate.swift */; };
+		187EA6981E002FE10092B871 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EA6971E002FE10092B871 /* ViewController.swift */; };
+		187EA69A1E002FE10092B871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187EA6991E002FE10092B871 /* Assets.xcassets */; };
+		187EA69D1E002FE10092B871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187EA69B1E002FE10092B871 /* Main.storyboard */; };
+		187EA6A81E002FE20092B871 /* Genetic_AlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EA6A71E002FE20092B871 /* Genetic_AlgorithmTests.swift */; };
+		187EA6B31E002FE20092B871 /* Genetic_AlgorithmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EA6B21E002FE20092B871 /* Genetic_AlgorithmUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		187EA6A41E002FE20092B871 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 187EA68A1E002FE10092B871 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 187EA6911E002FE10092B871;
+			remoteInfo = "Genetic Algorithm";
+		};
+		187EA6AF1E002FE20092B871 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 187EA68A1E002FE10092B871 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 187EA6911E002FE10092B871;
+			remoteInfo = "Genetic Algorithm";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		187EA6921E002FE10092B871 /* Genetic Algorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Genetic Algorithm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		187EA6951E002FE10092B871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		187EA6971E002FE10092B871 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		187EA6991E002FE10092B871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		187EA69C1E002FE10092B871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		187EA69E1E002FE10092B871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187EA6A31E002FE20092B871 /* Genetic AlgorithmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Genetic AlgorithmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		187EA6A71E002FE20092B871 /* Genetic_AlgorithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genetic_AlgorithmTests.swift; sourceTree = "<group>"; };
+		187EA6A91E002FE20092B871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187EA6AE1E002FE20092B871 /* Genetic AlgorithmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Genetic AlgorithmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		187EA6B21E002FE20092B871 /* Genetic_AlgorithmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genetic_AlgorithmUITests.swift; sourceTree = "<group>"; };
+		187EA6B41E002FE20092B871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		187EA68F1E002FE10092B871 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187EA6A01E002FE20092B871 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187EA6AB1E002FE20092B871 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		187EA6891E002FE10092B871 = {
+			isa = PBXGroup;
+			children = (
+				187EA6941E002FE10092B871 /* Genetic Algorithm */,
+				187EA6A61E002FE20092B871 /* Genetic AlgorithmTests */,
+				187EA6B11E002FE20092B871 /* Genetic AlgorithmUITests */,
+				187EA6931E002FE10092B871 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		187EA6931E002FE10092B871 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				187EA6921E002FE10092B871 /* Genetic Algorithm.app */,
+				187EA6A31E002FE20092B871 /* Genetic AlgorithmTests.xctest */,
+				187EA6AE1E002FE20092B871 /* Genetic AlgorithmUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		187EA6941E002FE10092B871 /* Genetic Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				187EA6951E002FE10092B871 /* AppDelegate.swift */,
+				187EA6971E002FE10092B871 /* ViewController.swift */,
+				187EA6991E002FE10092B871 /* Assets.xcassets */,
+				187EA69B1E002FE10092B871 /* Main.storyboard */,
+				187EA69E1E002FE10092B871 /* Info.plist */,
+			);
+			path = "Genetic Algorithm";
+			sourceTree = "<group>";
+		};
+		187EA6A61E002FE20092B871 /* Genetic AlgorithmTests */ = {
+			isa = PBXGroup;
+			children = (
+				187EA6A71E002FE20092B871 /* Genetic_AlgorithmTests.swift */,
+				187EA6A91E002FE20092B871 /* Info.plist */,
+			);
+			path = "Genetic AlgorithmTests";
+			sourceTree = "<group>";
+		};
+		187EA6B11E002FE20092B871 /* Genetic AlgorithmUITests */ = {
+			isa = PBXGroup;
+			children = (
+				187EA6B21E002FE20092B871 /* Genetic_AlgorithmUITests.swift */,
+				187EA6B41E002FE20092B871 /* Info.plist */,
+			);
+			path = "Genetic AlgorithmUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		187EA6911E002FE10092B871 /* Genetic Algorithm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 187EA6B71E002FE20092B871 /* Build configuration list for PBXNativeTarget "Genetic Algorithm" */;
+			buildPhases = (
+				187EA68E1E002FE10092B871 /* Sources */,
+				187EA68F1E002FE10092B871 /* Frameworks */,
+				187EA6901E002FE10092B871 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Genetic Algorithm";
+			productName = "Genetic Algorithm";
+			productReference = 187EA6921E002FE10092B871 /* Genetic Algorithm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		187EA6A21E002FE20092B871 /* Genetic AlgorithmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 187EA6BA1E002FE20092B871 /* Build configuration list for PBXNativeTarget "Genetic AlgorithmTests" */;
+			buildPhases = (
+				187EA69F1E002FE20092B871 /* Sources */,
+				187EA6A01E002FE20092B871 /* Frameworks */,
+				187EA6A11E002FE20092B871 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				187EA6A51E002FE20092B871 /* PBXTargetDependency */,
+			);
+			name = "Genetic AlgorithmTests";
+			productName = "Genetic AlgorithmTests";
+			productReference = 187EA6A31E002FE20092B871 /* Genetic AlgorithmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		187EA6AD1E002FE20092B871 /* Genetic AlgorithmUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 187EA6BD1E002FE20092B871 /* Build configuration list for PBXNativeTarget "Genetic AlgorithmUITests" */;
+			buildPhases = (
+				187EA6AA1E002FE20092B871 /* Sources */,
+				187EA6AB1E002FE20092B871 /* Frameworks */,
+				187EA6AC1E002FE20092B871 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				187EA6B01E002FE20092B871 /* PBXTargetDependency */,
+			);
+			name = "Genetic AlgorithmUITests";
+			productName = "Genetic AlgorithmUITests";
+			productReference = 187EA6AE1E002FE20092B871 /* Genetic AlgorithmUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		187EA68A1E002FE10092B871 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Orlando Amorim";
+				TargetAttributes = {
+					187EA6911E002FE10092B871 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = J6N5QCUQA9;
+						ProvisioningStyle = Automatic;
+					};
+					187EA6A21E002FE20092B871 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = J6N5QCUQA9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 187EA6911E002FE10092B871;
+					};
+					187EA6AD1E002FE20092B871 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = J6N5QCUQA9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 187EA6911E002FE10092B871;
+					};
+				};
+			};
+			buildConfigurationList = 187EA68D1E002FE10092B871 /* Build configuration list for PBXProject "Genetic Algorithm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 187EA6891E002FE10092B871;
+			productRefGroup = 187EA6931E002FE10092B871 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				187EA6911E002FE10092B871 /* Genetic Algorithm */,
+				187EA6A21E002FE20092B871 /* Genetic AlgorithmTests */,
+				187EA6AD1E002FE20092B871 /* Genetic AlgorithmUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		187EA6901E002FE10092B871 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187EA69A1E002FE10092B871 /* Assets.xcassets in Resources */,
+				187EA69D1E002FE10092B871 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187EA6A11E002FE20092B871 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187EA6AC1E002FE20092B871 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		187EA68E1E002FE10092B871 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187EA6981E002FE10092B871 /* ViewController.swift in Sources */,
+				187EA6961E002FE10092B871 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187EA69F1E002FE20092B871 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187EA6A81E002FE20092B871 /* Genetic_AlgorithmTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187EA6AA1E002FE20092B871 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187EA6B31E002FE20092B871 /* Genetic_AlgorithmUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		187EA6A51E002FE20092B871 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 187EA6911E002FE10092B871 /* Genetic Algorithm */;
+			targetProxy = 187EA6A41E002FE20092B871 /* PBXContainerItemProxy */;
+		};
+		187EA6B01E002FE20092B871 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 187EA6911E002FE10092B871 /* Genetic Algorithm */;
+			targetProxy = 187EA6AF1E002FE20092B871 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		187EA69B1E002FE10092B871 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				187EA69C1E002FE10092B871 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		187EA6B51E002FE20092B871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		187EA6B61E002FE20092B871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		187EA6B81E002FE20092B871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = J6N5QCUQA9;
+				INFOPLIST_FILE = "Genetic Algorithm/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.orlandoamorim.Genetic-Algorithm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		187EA6B91E002FE20092B871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = J6N5QCUQA9;
+				INFOPLIST_FILE = "Genetic Algorithm/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.orlandoamorim.Genetic-Algorithm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		187EA6BB1E002FE20092B871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = J6N5QCUQA9;
+				INFOPLIST_FILE = "Genetic AlgorithmTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.orlandoamorim.Genetic-AlgorithmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Genetic Algorithm.app/Contents/MacOS/Genetic Algorithm";
+			};
+			name = Debug;
+		};
+		187EA6BC1E002FE20092B871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = J6N5QCUQA9;
+				INFOPLIST_FILE = "Genetic AlgorithmTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.orlandoamorim.Genetic-AlgorithmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Genetic Algorithm.app/Contents/MacOS/Genetic Algorithm";
+			};
+			name = Release;
+		};
+		187EA6BE1E002FE20092B871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = J6N5QCUQA9;
+				INFOPLIST_FILE = "Genetic AlgorithmUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.orlandoamorim.Genetic-AlgorithmUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Genetic Algorithm";
+			};
+			name = Debug;
+		};
+		187EA6BF1E002FE20092B871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = J6N5QCUQA9;
+				INFOPLIST_FILE = "Genetic AlgorithmUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.orlandoamorim.Genetic-AlgorithmUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Genetic Algorithm";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		187EA68D1E002FE10092B871 /* Build configuration list for PBXProject "Genetic Algorithm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				187EA6B51E002FE20092B871 /* Debug */,
+				187EA6B61E002FE20092B871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		187EA6B71E002FE20092B871 /* Build configuration list for PBXNativeTarget "Genetic Algorithm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				187EA6B81E002FE20092B871 /* Debug */,
+				187EA6B91E002FE20092B871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		187EA6BA1E002FE20092B871 /* Build configuration list for PBXNativeTarget "Genetic AlgorithmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				187EA6BB1E002FE20092B871 /* Debug */,
+				187EA6BC1E002FE20092B871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		187EA6BD1E002FE20092B871 /* Build configuration list for PBXNativeTarget "Genetic AlgorithmUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				187EA6BE1E002FE20092B871 /* Debug */,
+				187EA6BF1E002FE20092B871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 187EA68A1E002FE10092B871 /* Project object */;
+}
