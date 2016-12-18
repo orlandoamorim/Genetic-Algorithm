@@ -25,7 +25,7 @@ class GeneticAlgorithm: NSObject {
     var operatorSelection: OperatorSelection = .Roulette
     var errorTax: Double = Double()
     
-    init(numberGenerations: Int = 100, populationSize: Int = 10, crossoverTax: Double = 0.5, mutationChance: Double = 0.1, chromossomeSize: Int = 5, tournamentSize: Int = 3, operatorSelection: OperatorSelection = .Roulette, cities: [Int: [Int]]) {
+    init(numberGenerations: Int = 100, populationSize: Int = 50, crossoverTax: Double = 0.5, mutationChance: Double = 0.1, chromossomeSize: Int = 5, tournamentSize: Int = 3, operatorSelection: OperatorSelection = .Roulette, cities: [Int: [Int]]) {
         self.numberGenerations = numberGenerations
         self.populationSize = populationSize
         self.crossoverTax = crossoverTax
@@ -173,6 +173,19 @@ class GeneticAlgorithm: NSObject {
         return chromossome!
     }
     
+    func getBest() -> Chromossome {
+        var chromossome: Chromossome?
+        var bestFitness: Double = 0.0
+        for i in 0..<population.count {
+            if population[i].relativeFitness > bestFitness {
+                chromossome = population[i]
+                bestFitness = population[i].relativeFitness
+            }
+        }
+        return chromossome!
+    }
+    
+    
     func calculateAverage(in population: [Chromossome]) -> Double {
         var average: Double = 0.0
         
@@ -195,23 +208,20 @@ class GeneticAlgorithm: NSObject {
         return convergence
     }
         
-    func start() {
+    func start() -> (populations: [String], bestChromossome: Chromossome) {
+        var populations: [String] = [String]()
         var generation_index = 1
 
-        while generation_index < 10 {
-            print("*************************************")
+        while /*(!verifyConvergence()) && */(generation_index < numberGenerations) {
             self.makeGenerarions()
-            print("Geracao \(generation_index)")
             generation_index += 1
+            populations.append("Generation \(generation_index)")
             for p in population {
-                print(p)
+                populations.append(p.description)
             }
-            print("*************************************\n\n")
         }
         
-        print("-------------- THE BEST -----------------")
-        print(getBest(chromossome: self.population))
-        print("-------------------------------------")
+        return (populations, getBest(chromossome: self.population))
     }
     
     

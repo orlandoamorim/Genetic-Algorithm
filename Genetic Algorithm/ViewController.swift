@@ -20,6 +20,7 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var exempleSegemented: NSSegmentedControl!
     @IBOutlet weak var citiesRoutes: NSTextField!
+    @IBOutlet weak var gaStartProgress: NSProgressIndicator!
     
     
     override func viewDidLoad() {
@@ -44,17 +45,19 @@ class ViewController: NSViewController {
     }
     
     @IBAction func start(_ sender: NSButton) {
-        let ga = GeneticAlgorithm(cities: getCity())
-        ga.start()
-        
-
-//        _  = Chromossome(numberGenerations: numberGenerations.stringValue != "" ? Int(numberGenerations.stringValue)! : 100,
-//                    populationSize: populationSize.stringValue != "" ? Int(populationSize.stringValue)! : 50,
-//                    crossoverTax: crossoverTax.stringValue != "" ? Float(crossoverTax.stringValue)! : 0.5,
-//                    mutationChance: mutationChance.stringValue != "" ? Float(mutationChance.stringValue)! : 0.1,
-//                    chromossomeSize: chromossomeSize.stringValue != "" ? Int(chromossomeSize.stringValue)! : 5,
-//                    tournamentSize: tournamentSize.stringValue != "" ? Int(tournamentSize.stringValue)! : 3,
-//                    operatorSelection: operatorSelection.selectedSegment == 0 ? .Roulette : .Tournament )
+        gaStartProgress.startAnimation(nil)
+        performSegue(withIdentifier: "ResultSegue", sender: nil)
+    }
+    
+    func startGA() -> (populations: [String], bestChromossome: Chromossome) {
+        return GeneticAlgorithm(numberGenerations: numberGenerations.stringValue != "" ? Int(numberGenerations.stringValue)! : 100,
+                                                     populationSize: populationSize.stringValue != "" ? Int(populationSize.stringValue)! : 50,
+                                                     crossoverTax: crossoverTax.stringValue != "" ? Double(crossoverTax.stringValue)! : 0.5,
+                                                     mutationChance: mutationChance.stringValue != "" ? Double(mutationChance.stringValue)! : 0.1,
+                                                     chromossomeSize: chromossomeSize.stringValue != "" ? Int(chromossomeSize.stringValue)! : 5,
+                                                     tournamentSize: tournamentSize.stringValue != "" ? Int(tournamentSize.stringValue)! : 3,
+                                                     operatorSelection: operatorSelection.selectedSegment == 0 ? .Roulette : .Tournament,
+                                                     cities: getCity()).start()
     }
 
     func getCity() -> [Int : [Int]] {
@@ -62,7 +65,6 @@ class ViewController: NSViewController {
         var index = 1
         var citiesR:String = citiesRoutes.placeholderString!
         if citiesRoutes.stringValue != "" { citiesR = citiesRoutes.stringValue }
-        print(citiesR)
         for i in citiesR.components(separatedBy: "\n") {
             t[index] = String(i.characters.filter { !"\n\t\r".characters.contains($0) }).components(separatedBy: " ").map({ Int($0)! })
             index += 1
@@ -83,10 +85,17 @@ class ViewController: NSViewController {
             citiesRoutes.placeholderString = "0 51 95 50 31\n51 0 6 39 69\n95 6 0 63 44\n50 39 63 0 44\n31 69 44 44 0"
         }
     }
-}
-
-extension String {
-    mutating func replace(_ originalString:String, with newString:String) {
-        self = self.replacingOccurrences(of: originalString, with: newString)
+    
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ResultSegue" {
+            let resultsVC = segue.destinationController as! ResultsVC
+            let v = startGA()
+            resultsVC.objects = v.populations
+            resultsVC.bestChromossome = v.bestChromossome.description
+            gaStartProgress.stopAnimation(nil)
+        }
     }
+    
+    
+    
 }
