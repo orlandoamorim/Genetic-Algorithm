@@ -853,11 +853,26 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="start:" target="XfG-lQ-9wD" id="Lcb-rq-oii"/>
+                                    <segue destination="sve-bK-A0U" kind="popover" identifier="ResultSegue" popoverAnchorView="3Oa-AY-kkq" popoverBehavior="t" preferredEdge="maxY" id="odz-RB-gRU"/>
                                 </connections>
                             </button>
                             <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="h8r-5F-8N1">
                                 <rect key="frame" x="276" y="22" width="16" height="16"/>
                             </progressIndicator>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="r3f-7h-jQf">
+                                <rect key="frame" x="400" y="0.0" width="80" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="gc4-mg-ZrX"/>
+                                    <constraint firstAttribute="width" constant="80" id="uPj-Fz-ojC"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="DevelopedBy" imagePosition="left" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="RUY-3r-eXy">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="xz8-QO-2gH" kind="popover" popoverAnchorView="r3f-7h-jQf" popoverBehavior="t" preferredEdge="maxY" id="EbK-Ec-npv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="hJf-49-TVg" firstAttribute="leading" secondItem="qyk-Ae-wWl" secondAttribute="leading" id="1v4-7X-kLc"/>
@@ -888,6 +903,7 @@
                             <constraint firstItem="h8r-5F-8N1" firstAttribute="top" secondItem="3Oa-AY-kkq" secondAttribute="bottom" constant="-18" id="U15-Cm-Drh"/>
                             <constraint firstItem="YMh-wT-X2O" firstAttribute="leading" secondItem="pbZ-hs-gL3" secondAttribute="leading" id="VJ7-ZP-jVW"/>
                             <constraint firstItem="NbH-Qd-Znc" firstAttribute="centerX" secondItem="vqa-h8-xG8" secondAttribute="centerX" id="WU1-Rq-2QL"/>
+                            <constraint firstAttribute="bottom" secondItem="r3f-7h-jQf" secondAttribute="bottom" id="Y4L-e1-UNa"/>
                             <constraint firstItem="gtg-7q-7dT" firstAttribute="top" secondItem="TIT-Ca-FLt" secondAttribute="bottom" constant="6" id="Y6h-Wl-8B3"/>
                             <constraint firstItem="XXt-PQ-Fbl" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="32" id="YxY-zj-dfW"/>
                             <constraint firstAttribute="trailing" secondItem="NYL-Wh-Dxh" secondAttribute="trailing" constant="20" symbolic="YES" id="aFs-hb-K9a"/>
@@ -899,6 +915,7 @@
                             <constraint firstItem="DUt-z5-4vC" firstAttribute="leading" secondItem="eYm-HO-pHn" secondAttribute="leading" id="iz9-PZ-ccE"/>
                             <constraint firstItem="gtg-7q-7dT" firstAttribute="trailing" secondItem="YMh-wT-X2O" secondAttribute="trailing" id="kf4-6G-n8s"/>
                             <constraint firstItem="YMh-wT-X2O" firstAttribute="top" secondItem="gtg-7q-7dT" secondAttribute="bottom" constant="6" id="lqU-KO-BOy"/>
+                            <constraint firstAttribute="trailing" secondItem="r3f-7h-jQf" secondAttribute="trailing" id="nhq-Nh-XGQ"/>
                             <constraint firstItem="NYL-Wh-Dxh" firstAttribute="trailing" secondItem="e90-bn-db4" secondAttribute="trailing" id="oBb-up-hVs"/>
                             <constraint firstItem="vqa-h8-xG8" firstAttribute="top" secondItem="NbH-Qd-Znc" secondAttribute="bottom" constant="8" symbolic="YES" id="oVx-nl-LG1"/>
                             <constraint firstItem="qyk-Ae-wWl" firstAttribute="leading" secondItem="DUt-z5-4vC" secondAttribute="leading" id="qN0-v2-eY3"/>
@@ -918,12 +935,42 @@
                         <outlet property="operatorSelection" destination="ohB-FA-bkt" id="Kz8-fh-mbI"/>
                         <outlet property="populationSize" destination="e90-bn-db4" id="QA6-NQ-BA2"/>
                         <outlet property="tournamentSize" destination="pbZ-hs-gL3" id="Lcn-XN-8ue"/>
-                        <segue destination="sve-bK-A0U" kind="popover" identifier="ResultSegue" popoverBehavior="t" preferredEdge="maxY" id="2cu-Gr-W2G"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="769.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Zuc-Kj-yTz">
+            <objects>
+                <viewController id="xz8-QO-2gH" sceneMemberID="viewController">
+                    <view key="view" id="snF-zT-gMH">
+                        <rect key="frame" x="0.0" y="0.0" width="560" height="17"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4OO-xY-PxE">
+                                <rect key="frame" x="-2" y="0.0" width="564" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="This project was created with ♥︎ by Francisco Mendes, Orlando Amorim and Pedro Henrique" id="XWT-Uy-3mM">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="4OO-xY-PxE" firstAttribute="top" secondItem="snF-zT-gMH" secondAttribute="top" id="56p-Oa-M6P"/>
+                            <constraint firstAttribute="bottom" secondItem="4OO-xY-PxE" secondAttribute="bottom" id="748-EY-M6p"/>
+                            <constraint firstItem="4OO-xY-PxE" firstAttribute="leading" secondItem="snF-zT-gMH" secondAttribute="leading" id="RhY-YS-feM"/>
+                            <constraint firstItem="4OO-xY-PxE" firstAttribute="centerY" secondItem="snF-zT-gMH" secondAttribute="centerY" id="TX4-2F-Wbj"/>
+                            <constraint firstAttribute="trailing" secondItem="4OO-xY-PxE" secondAttribute="trailing" id="j4c-eQ-rUX"/>
+                            <constraint firstItem="4OO-xY-PxE" firstAttribute="centerX" secondItem="snF-zT-gMH" secondAttribute="centerX" id="jpn-I1-3uJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="t7v-uP-RjE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="1168.5"/>
         </scene>
         <!--ResultsVC-->
         <scene sceneID="dQ1-I5-08t">
@@ -1058,4 +1105,7 @@
             <point key="canvasLocation" x="755" y="687"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DevelopedBy" width="149" height="17"/>
+    </resources>
 </document>

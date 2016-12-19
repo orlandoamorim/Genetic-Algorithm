@@ -93,25 +93,25 @@ class GeneticAlgorithm: NSObject {
     
     
     func tournament() -> Chromossome {
-        var fathers: [Chromossome] = [Chromossome]()
+        var population: [Chromossome] = [Chromossome]()
         var bIndex: Double = 0.0
         var bFitness: Double = 0.0
         
         for i in 0..<self.tournamentSize {
-            fathers.append(self.population[Int(drand48() * Double(self.populationSize))])
-            if fathers[i].absoluteFitness > bFitness {
+            population.append(self.population[Int(drand48() * Double(self.populationSize))])
+            if population[i].absoluteFitness > bFitness {
                 bIndex = Double(i)
-                bFitness = fathers[i].relativeFitness
+                bFitness = population[i].relativeFitness
             }
         }
-        return fathers[Int(bIndex)]
+        return population[Int(bIndex)]
     }
     
     func roulette() -> Chromossome {
         var i = 0
         var j = 0
         var auxSom: Double = 0
-        let upperBoundary: Double = drand48() * self.somFitness()
+        let upperBoundary: Double = drand48() * self.sumRelativeFitness()
     
         while auxSom < upperBoundary && i < self.populationSize{
             auxSom += self.population[i].relativeFitness
@@ -123,7 +123,7 @@ class GeneticAlgorithm: NSObject {
         
     }
     
-    func somFitness() -> Double {
+    func sumRelativeFitness() -> Double {
         var value: Double = 0.0
         for c in self.population {
             value += c.relativeFitness
@@ -212,7 +212,7 @@ class GeneticAlgorithm: NSObject {
         var populations: [String] = [String]()
         var generation_index = 1
 
-        while /*(!verifyConvergence()) && */(generation_index < numberGenerations) {
+        while /*verifyConvergence() != false && */(generation_index < numberGenerations) {
             self.makeGenerarions()
             generation_index += 1
             populations.append("Generation \(generation_index)")
@@ -220,11 +220,6 @@ class GeneticAlgorithm: NSObject {
                 populations.append(p.description)
             }
         }
-        
         return (populations, getBest(chromossome: self.population))
     }
-    
-    
-    
-    
 }

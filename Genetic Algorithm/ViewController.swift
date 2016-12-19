@@ -45,8 +45,8 @@ class ViewController: NSViewController {
     }
     
     @IBAction func start(_ sender: NSButton) {
-        gaStartProgress.startAnimation(nil)
-        performSegue(withIdentifier: "ResultSegue", sender: nil)
+        
+//        performSegue(withIdentifier: "ResultSegue", sender: nil)
     }
     
     func startGA() -> (populations: [String], bestChromossome: Chromossome) {
@@ -88,6 +88,7 @@ class ViewController: NSViewController {
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         if segue.identifier == "ResultSegue" {
+            gaStartProgress.startAnimation(nil)
             let resultsVC = segue.destinationController as! ResultsVC
             let v = startGA()
             resultsVC.objects = v.populations
