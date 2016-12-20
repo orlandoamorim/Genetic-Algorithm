@@ -25,6 +25,9 @@ class GeneticAlgorithm: NSObject {
     var operatorSelection: OperatorSelection = .Roulette
     var errorTax: Double = Double()
     
+    var populationsToPrint: [String] = [String]()
+
+    
     init(numberGenerations: Int = 100, populationSize: Int = 50, crossoverTax: Double = 0.5, mutationChance: Double = 0.1, chromossomeSize: Int = 5, tournamentSize: Int = 3, operatorSelection: OperatorSelection = .Roulette, cities: [Int: [Int]]) {
         self.numberGenerations = numberGenerations
         self.populationSize = populationSize
@@ -134,24 +137,31 @@ class GeneticAlgorithm: NSObject {
     func makeGenerarions() {
         var newPopulation:[Chromossome] = [Chromossome]()
         var sons: [Chromossome] = [Chromossome]()
-        
+        var i: Int = 1
         while newPopulation.count < self.population.count {
             if operatorSelection == .Tournament {
                 let fatherOne = self.tournament()
                 let fatherTwo = self.tournament()
                 sons = fatherOne.crossover(routes: fatherTwo.routes)
-                
+                populationsToPrint.append(">>-----------------------------------> Fathers |\(i)| <-----------------------------------------<<")
+                populationsToPrint.append("1˚ - \(fatherOne)")
+                populationsToPrint.append("2˚ - \(fatherTwo)")
             }else if operatorSelection == .Roulette {
                 let fatherOne = self.roulette()
                 let fatherTwo = self.roulette()
                 sons = fatherOne.crossover(routes: fatherTwo.routes)
+                populationsToPrint.append(">>-----------------------------------> Fathers |\(i)| <-----------------------------------------<<")
+                populationsToPrint.append("1˚ - \(fatherOne)")
+                populationsToPrint.append("2˚ - \(fatherTwo)")
             }
-            
+            populationsToPrint.append(">>-------------->   Sons   <--------------<<")
             for var son in sons {
                 son.mutation()
                 son = verifySon(in: son)
                 newPopulation.append(son)
+                populationsToPrint.append("\(sons.index(of: son)!) -> \(son.description)")
             }
+            i += 1
         }
         
         self.population = newPopulation
@@ -209,17 +219,14 @@ class GeneticAlgorithm: NSObject {
     }
         
     func start() -> (populations: [String], bestChromossome: Chromossome) {
-        var populations: [String] = [String]()
         var generation_index = 1
-
-        while /*verifyConvergence() != false && */(generation_index < numberGenerations) {
+        while verifyConvergence() == false && (generation_index < numberGenerations) {
+            populationsToPrint.append("****************************************************************************************")
+            populationsToPrint.append("Generation \(generation_index)")
             self.makeGenerarions()
             generation_index += 1
-            populations.append("Generation \(generation_index)")
-            for p in population {
-                populations.append(p.description)
-            }
         }
-        return (populations, getBest(chromossome: self.population))
+        populationsToPrint.append("****************************************************************************************")
+        return (populationsToPrint, getBest(chromossome: self.population))
     }
 }

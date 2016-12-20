@@ -4,7 +4,6 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -997,7 +996,7 @@
                                     <rect key="frame" x="1" y="1" width="588" height="259"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="30" viewBased="YES" id="2Uh-MD-8dA">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="30" rowSizeStyle="automatic" viewBased="YES" id="2Uh-MD-8dA">
                                             <rect key="frame" x="0.0" y="0.0" width="588" height="259"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -1022,21 +1021,21 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="t8v-vs-l8H">
-                                                                    <rect key="frame" x="1" y="0.0" width="583" height="30"/>
+                                                                    <rect key="frame" x="1" y="6" width="583" height="18"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="30" id="6Ef-4b-qxN"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="mVK-CS-VJz"/>
                                                                     </constraints>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="Table View Cell" usesSingleLineMode="YES" id="lIL-Yd-WUC">
-                                                                        <font key="font" metaFont="systemThin" size="13"/>
+                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Table View Cell" usesSingleLineMode="YES" id="lIL-Yd-WUC">
+                                                                        <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="t8v-vs-l8H" firstAttribute="leading" secondItem="ZTt-tD-PDf" secondAttribute="leading" constant="3" id="Ic8-mI-eZm"/>
-                                                                <constraint firstAttribute="trailing" secondItem="t8v-vs-l8H" secondAttribute="trailing" constant="3" id="gmy-N4-rWN"/>
-                                                                <constraint firstItem="t8v-vs-l8H" firstAttribute="centerY" secondItem="ZTt-tD-PDf" secondAttribute="centerY" id="hV7-iy-smP"/>
+                                                                <constraint firstItem="t8v-vs-l8H" firstAttribute="leading" secondItem="ZTt-tD-PDf" secondAttribute="leading" constant="3" id="2oN-e6-tEj"/>
+                                                                <constraint firstAttribute="trailing" secondItem="t8v-vs-l8H" secondAttribute="trailing" constant="3" id="K4p-Iv-1Zf"/>
+                                                                <constraint firstItem="t8v-vs-l8H" firstAttribute="centerY" secondItem="ZTt-tD-PDf" secondAttribute="centerY" id="nNu-tU-z65"/>
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="t8v-vs-l8H" id="f38-bB-u5m"/>
