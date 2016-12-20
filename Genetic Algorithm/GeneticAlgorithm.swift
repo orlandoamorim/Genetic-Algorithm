@@ -169,8 +169,13 @@ class GeneticAlgorithm: NSObject {
     
     }
     
-    //HELPERS
-    
+    /**
+     Returns the best chromosome in the population
+     
+     :param: [Chromosome] The population values that you want to know the best chromosome
+     
+     :returns:   Bool
+     */
     func getBest(chromossome inPopulation: [Chromossome]) -> Chromossome {
         var chromossome: Chromossome?
         var bestFitness: Double = 0.0
@@ -183,6 +188,11 @@ class GeneticAlgorithm: NSObject {
         return chromossome!
     }
     
+    /**
+     Returns the best chromosome in the population
+     
+     :returns:   Bool
+     */
     func getBest() -> Chromossome {
         var chromossome: Chromossome?
         var bestFitness: Double = 0.0
@@ -208,6 +218,11 @@ class GeneticAlgorithm: NSObject {
         return average
     }
     
+    /**
+     Check the homogeneity of the population, and if very close to each other, returns true
+     
+     :returns:   Bool
+     */
     func verifyConvergence() -> Bool {
         var convergence:Bool = false
         let chromossome = getBest(chromossome: self.population)

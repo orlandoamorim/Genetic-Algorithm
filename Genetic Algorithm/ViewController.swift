@@ -14,7 +14,6 @@ class ViewController: NSViewController {
     @IBOutlet weak var populationSize: NSTextField!
     @IBOutlet weak var crossoverTax: NSTextField!
     @IBOutlet weak var mutationChance: NSTextField!
-    @IBOutlet weak var chromossomeSize: NSTextField!
     @IBOutlet weak var tournamentSize: NSTextField!
     @IBOutlet weak var operatorSelection: NSSegmentedControl!
     
@@ -38,26 +37,21 @@ class ViewController: NSViewController {
         populationSize.formatter = onlyIntFormatter
         crossoverTax.formatter = onlyIntFormatter
         mutationChance.formatter = onlyIntFormatter
-        chromossomeSize.formatter = onlyIntFormatter
         tournamentSize.formatter = onlyIntFormatter
         operatorSelection.formatter = onlyIntFormatter
 
     }
-    
-    @IBAction func start(_ sender: NSButton) {
-        
-//        performSegue(withIdentifier: "ResultSegue", sender: nil)
-    }
-    
+
     func startGA() -> (populations: [String], bestChromossome: Chromossome) {
+        let c = getCity()
         return GeneticAlgorithm(numberGenerations: numberGenerations.stringValue != "" ? Int(numberGenerations.stringValue)! : 100,
                                                      populationSize: populationSize.stringValue != "" ? Int(populationSize.stringValue)! : 50,
                                                      crossoverTax: crossoverTax.stringValue != "" ? Double(crossoverTax.stringValue)! : 0.5,
                                                      mutationChance: mutationChance.stringValue != "" ? Double(mutationChance.stringValue)! : 0.1,
-                                                     chromossomeSize: chromossomeSize.stringValue != "" ? Int(chromossomeSize.stringValue)! : 5,
+                                                     chromossomeSize: c.count,
                                                      tournamentSize: tournamentSize.stringValue != "" ? Int(tournamentSize.stringValue)! : 3,
                                                      operatorSelection: operatorSelection.selectedSegment == 0 ? .Roulette : .Tournament,
-                                                     cities: getCity()).start()
+                                                     cities: c).start()
     }
 
     func getCity() -> [Int : [Int]] {
