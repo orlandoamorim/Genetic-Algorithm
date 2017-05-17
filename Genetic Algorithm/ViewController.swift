@@ -35,8 +35,8 @@ class ViewController: NSViewController {
         let onlyIntFormatter = OnlyIntegerValueFormatter()
         numberGenerations.formatter = onlyIntFormatter
         populationSize.formatter = onlyIntFormatter
-        crossoverTax.formatter = onlyIntFormatter
-        mutationChance.formatter = onlyIntFormatter
+//        crossoverTax.formatter = onlyIntFormatter
+//        mutationChance.formatter = onlyIntFormatter
         tournamentSize.formatter = onlyIntFormatter
         operatorSelection.formatter = onlyIntFormatter
 
@@ -70,14 +70,31 @@ class ViewController: NSViewController {
         
         switch sender.selectedSegment {
         case 0:
-            citiesRoutes.placeholderString = "0 51 95 50 31\n51 0 6 39 69\n95 6 0 63 44\n50 39 63 0 44\n31 69 44 44 0"
-        case 1:
             citiesRoutes.placeholderString = "0 2 -1 3 6\n2 0 4 3 -1\n-1 4 0 7 3\n3 3 7 0 3\n6 -1 3 3 0"
+        case 1:
+//            citiesRoutes.placeholderString = "0 51 95 50 31\n51 0 6 39 69\n95 6 0 63 44\n50 39 63 0 44\n31 69 44 44 0"
+            citiesRoutes.placeholderString = "0 25 25 50 30\n25 0 15 5 10\n25 15 0 50 -1\n50 5 50 0 10\n30 10 -1 10 0"
+
+            
         case 2:
-            citiesRoutes.placeholderString = "0 9 -1 -1 8 14\n9 0 14 -1 8 7\n-1 14 0 15 -1 8\n-1 -1 15 0 12 12\n8 8 -1 12 0 10\n14 7 8 12 10 0"
+//            citiesRoutes.placeholderString = "0 9 -1 -1 8 14\n9 0 14 -1 8 7\n-1 14 0 15 -1 8\n-1 -1 15 0 12 12\n8 8 -1 12 0 10\n14 7 8 12 10 0"
+            citiesRoutes.placeholderString = "0 113 147 167 56\n113 0 98 142 137\n147 98 0 58 135\n167 142 58 0 133\n56 137 135 133 0"
         default:
-            citiesRoutes.placeholderString = "0 51 95 50 31\n51 0 6 39 69\n95 6 0 63 44\n50 39 63 0 44\n31 69 44 44 0"
+            citiesRoutes.placeholderString = "0 2 -1 3 6\n2 0 4 3 -1\n-1 4 0 7 3\n3 3 7 0 3\n6 -1 3 3 0"
         }
+        
+//        0 113 147 167 56
+//        113 0 98 142 137
+//        147 98 0 58 135
+//        167 142 58 0 133
+//        56 137 135 133 0
+        
+        
+//        0 25 25 50 30
+//        25 0 15 5 10
+//        25 15 0 50 -1
+//        50 5 50 0 10
+//        30 10 -1 10 0
     }
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {

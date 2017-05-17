@@ -235,7 +235,7 @@ class GeneticAlgorithm: NSObject {
         
     func start() -> (populations: [String], bestChromossome: Chromossome) {
         var generation_index = 1
-        while verifyConvergence() == false && (generation_index < numberGenerations) {
+        while  verifyConvergence() == false && (generation_index < numberGenerations) {
             populationsToPrint.append("****************************************************************************************")
             populationsToPrint.append("Generation \(generation_index)")
             self.makeGenerarions()
